@@ -33,7 +33,7 @@ ADR;TYPE=HOME:;;${userData.address};${userData.city};;${userData.zip};${userData
 END:VCARD`;
 
     // --- 5. Configurer les En-têtes pour forcer le Téléchargement ---
-    res.setHeader('Content-Type', 'text/vcard; charset=utf-8');
+    res.setHeader('Content-Type', 'text/x-vcard; charset=utf-8');
     res.setHeader('Content-Disposition', `attachment; filename="contact_${cardId}.vcf"`);
     res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate'); 
 
